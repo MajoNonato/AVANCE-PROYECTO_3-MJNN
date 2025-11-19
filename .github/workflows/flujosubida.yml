@@ -20,7 +20,7 @@ jobs:
       apellidos: "Nonato Nava"
       edad: "20"
     
-      username: ${{ secrets.USERNAME }}  
+      username: ${{ secrets.USERNAME}}  
       password: ${{ secrets.PASSWORD}}
 
     # The type of runner that the job will run on
@@ -56,8 +56,13 @@ jobs:
       # 3er step: variables secretas
       - name: variables secretas
         run: |    
-          echo "El usuario es: ${{ secrets.USERNAME }}"
+          echo "El usuario es: ${{ secrets.USERNAME}}"
           echo "Password: ${{ secrets.PASSWORD}}"
+
+      # 4to step: variables abierta
+      - name: variables abierta
+        run: |
+          echo "Imprimiendo variables abierta": ${{ vars.VERSION_DE_MI_PROYECTO}}   
           
           
 
