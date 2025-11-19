@@ -63,6 +63,12 @@ jobs:
       - name: variables abierta
         run: |
           echo "Imprimiendo variables abierta": ${{ vars.VERSION_DE_MI_PROYECTO}}   
-          
-          
+
+      # 5to step: finalizar    
+      - name: variables abiertas(como variables) 
+        run: |  
+          echo "nombres: $nombres"
+          echo "apellidos: $apellidos"
+          echo "edad: $edad"
+          echo "versión de mi proyecto: $VERSION_DE_MI_PROYECTO"
 
